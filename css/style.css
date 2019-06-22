@@ -53,10 +53,19 @@ content {
 }
 
 table, th, td {
-  border: 1px solid black;
+  border: 0.01rem solid grey;
   float: center;
 }
 
 table {
   width: 100%;
+}
+
+.copyright {
+  min-height: 40px;
+  background-color: #141d29;
+  text-align: center;
+  color: white;
+  padding: .1rem;
+  margin-bottom: 0px;
 }
