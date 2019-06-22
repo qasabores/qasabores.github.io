@@ -211,6 +211,21 @@ function Template(Sabor){
 document.body.innerHTML = `
 <h1>Hola, soy un compendio (${acid.length + Alde.length + Keto.length + Ester.length + alco.length + Otros.length} compuestos)</h1>
 
+
+<button class="collapsible" style="background-color:#f4cc9a"> 
+  <h2> Ácido carboxílico </h2>
+</button>
+<div class="content">
+   ${acid.map(Template).join()} 
+</div>
+
+<button class="collapsible" style="background-color:#9af4cc"> 
+  <h2> Alcohol </h2> 
+</button>
+  <div class="content">
+      ${alco.map(Template).join()}
+  </div>
+
 <button class="collapsible" style="background-color:#f49ac2"> 
     <h2> Aldehídos </h2> 
 </button>
@@ -231,20 +246,6 @@ document.body.innerHTML = `
   <div class="content">
     ${Ester.map(Template).join()} 
   </div>
-
-<button class="collapsible" style="background-color:#9af4cc"> 
-  <h2> Alcohol </h2> 
-</button>
-  <div class="content">
-      ${alco.map(Template).join()}
-  </div>
-
-<button class="collapsible" style="background-color:#f4cc9a"> 
-  <h2> Ácido carboxílico </h2>
-</button>
-<div class="content">
-   ${acid.map(Template).join()} 
-</div>
 
 <button class="collapsible" style="background-color:"#eee"> 
   <h2> Otros </h2> 
