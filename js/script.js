@@ -6,7 +6,7 @@ const Alde = [
     "FEMA" : 2781,
     "Type" : "Aldehido",
     "LitO": ["Caramelo", "Frutral"],
-    "LitS": "coco",
+    "LitS": ["Coco"],
     "Lab":{
         "Sar":  1, "Efr": 1, "Dam": 1, "Yaz": 1, "Pab":  1
     }
@@ -73,19 +73,17 @@ const Otros = [
       "FEMA" : 3487,
       "Type" : "Otros",
       "LitO": ["uva"], 
-      "LitS": "uva",
+      "LitS": ["uva"],
       "Lab":{
         "Sar":  1, "Efr": 1, "Dam": 1, "Yaz": 1, "Pab":  1
       }
   },
   {
     "Name": "Beta Ionona",
-    "LitS": [""],
     "LitO": ["Mediciona","Jarabe","Notas rojas"]
   },
   {
     "Name": "D-limoneno",
-    "LitS": [""],
     "LitO": ["Citrico","Cascara de limón"]
   },
   {
@@ -95,12 +93,10 @@ const Otros = [
   },
   {
     "Name": "6-metil cumarina",
-    "LitS": [""],
     "LitO": ["Frutos secos", "nueces"]
   },
   {
     "Name": "Furaneol",
-    "LitS": [""],
     "LitO": ["Frutos rojos"]
   },
   {
@@ -116,7 +112,7 @@ const Ester =[
     "Type": "Ester",
     "FEMA": 2443,
     "CAS": "105-54-4",
-    "LitS": ["Uva", "Jugo de UVA"],
+    "LitS": ["Uva", "Jugo de uva"],
     "LitO": ["Uva artficial"]
   },
  {
@@ -126,22 +122,18 @@ const Ester =[
   },
   {
     "Name": "Isoamilbutirato",
-    "LitS": [""],
     "LitO": ["Plátano", "chicle"]    
   },
   {
     "Name": "Etil capronato",
-    "LitS": [""],
     "LitO": ["Dulce de anís"]
   },
   {
     "Name": "Etil 2-metilbutirato",
-    "LitS": [""],
     "LitO": ["Fresa artificial"]  
   },
   {
     "Name": "Hexil acetato",
-    "LitS": [""],
     "LitO": ["Piña verde","Jugo de piña"]
   },
   {
@@ -151,12 +143,10 @@ const Ester =[
   },
   {
     "Name": "Alil ciclohexil propionato",
-    "LitS": [""],
     "LitO": ["Moras"]
   },
   {
     "Name": "Alil heptilato",
-    "LitS": [""],
     "LitO": ["Dulce de anís"]
 
     
@@ -196,17 +186,23 @@ function Template(Sabor){
     ${Sabor.FEMA ? `<b>FEMA: </b> ${Sabor.FEMA}`: ""}</p>
     
     <p> ${Sabor.Syn ? `<b>Sinónimos: </b> ${Sabor.Syn.join(", ")} `: ""} </p>
-   
-    <p> 
-   
-    ${Sabor.LitO ? `<b>Olor de literatura: </b> 
-                    <ul>${Sabor.LitO.map(function(LitO){ return `<li>${LitO}</li>`}).join("")}</ul>`: ""} 
-    ${Sabor.LitS ? `<b>Sabor de literatura: </b> 
-                    ${Sabor.LitS}`: ""}
-    </p>
-    
-    </div>
-`}
+
+  <div style="overflow-x:auto;">
+    <table>
+    <tr class="Tabheader">
+      <th style="width:50%;">Olor</th>
+      <th style="width:50%;">Sabor</th>
+    </tr>
+    <tr>
+      <td> ${Sabor.LitO ? `${Sabor.LitO.join("<br>")}`: ""} </td>
+      <td> ${Sabor.LitS ? `${Sabor.LitS.join("<br>")}`: ""} </td>
+    </tr>
+    </table>
+  </div>
+
+  </div>
+
+  `}
 
 document.body.innerHTML = `
 <h1>Hola, soy un compendio (${acid.length + Alde.length + Keto.length + Ester.length + alco.length + Otros.length} compuestos)</h1>

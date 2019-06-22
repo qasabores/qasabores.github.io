@@ -10,11 +10,7 @@ body {
   font-weight: 500;
 }
 
-h1,h2 {
-  text-align: center;
-}
-
-h3 {
+h1,h2,h3 {
   text-align: center;
 }
 
@@ -39,6 +35,7 @@ content {
   overflow: hidden;
   background-color: #f1f1f1;
 }
+
 .sab {
   max-width: 650px;
   padding: 20px;
@@ -53,4 +50,13 @@ content {
   height: 5.1rem;
   margin-right: 15px;
 
+}
+
+table, th, td {
+  border: 1px solid black;
+  float: center;
+}
+
+table {
+  width: 100%;
 }
