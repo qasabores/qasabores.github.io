@@ -1,3 +1,33 @@
+const acid = [
+  {
+  "Name": "Ácido acético",
+  "FEMA": 2006,
+  "CAS": "64-19-7",
+  "Syn" : ["Acido acetico glacial","Vosol"],
+  "LitO": ["Vinagre","Agrio desagradable"],
+  "LitS": ["Agrio", "Acido penetrante", "Aumenta sabor en poca concentraciones"]
+    
+}]
+
+const alco = [
+  {
+    "Name": "Eugenol",
+    "LitO": ["Pasta dental", "Mentolado","Ajo"],
+    "FEMA": 2467,
+    "CAS" : "97-53-0",
+    "Syn" : ["p-Eugenol","2-Metoxi-4-(2-propenil)fenol", "4-Alil-2-metoxifenol", "4-Alilguayacol"]
+  
+  },
+  {
+    "Name": "Hexenol cis-3",
+    "LitO": ["Pasto cortado", "Notas verdes"],
+    "Syn": ["Alcohol de hoja"],
+    "CAS": "928-96-1",
+    "FEMA": 2563,
+    "LitS":["Pasto","Verde","Hierbas"]
+  }
+]
+
 const Alde = [
   {
     "Name" : "Aldehido-C18",
@@ -6,7 +36,7 @@ const Alde = [
     "FEMA" : 2781,
     "Type" : "Aldehido",
     "LitO": ["Caramelo", "Frutral"],
-    "LitS": ["Coco"],
+    "LitS": ["Coco","Cremoso"],
     "Lab":{
         "Sar":  1, "Efr": 1, "Dam": 1, "Yaz": 1, "Pab":  1
     }
@@ -15,131 +45,92 @@ const Alde = [
   {
     "Name": "Benzaldehido",
     "Type": "Aldehido",
-    "FEMA": 2127
+    "FEMA": 2127,
+    "CAS": "100-52-7",
+    "LitO":["Almendra"],
+    "LitS":["Almendra","Cereza","Nueces","Aceitoso"]
   },
 
  
 ]
 
-const acid = [
-  {
-  "Name": "Ácido acético",
-  "FEMA": 2006,
-  "CAS": "64-19-7",
-  "Syn" : ["Acido acetico glacial","Vosol"],
-  "LitO": ["Vinagre","Agrio desagradable"],
-  "LitS": ["agrio", "ácido penetrante"]
-      
-}]
-
 const Keto = [
   {
     "Name": "Raspberry Ketone",
+    "Syn":["4-(4Hidroxifenil)-2-butanona","Rheosmin","p-Hidroxibencil acetona","Frambinone"],
     "Type": "Cetona",
+    "CAS":"5471-51-2",
     "FEMA": 2588,
-    "LitS": ["Frambuesa","Frutos rojos"],
+    "LitS": ["Frambuesa","Frutos rojos", "Algodón de azucar"],
     "LitO": ["Moras", "Cremoso"]
   },
   {
     "Name": "Diacetilo",
     "Type": "Cetona",
+    "Syn": ["2,3-butanodione","Dimetil dicetona"],
+    "CAS":"431-03-8",
     "FEMA": 2370,
-    "LitO": ["Mantequilla quemada"]
+    "LitO": ["Mantequilla quemada"],
+    "LitS":["Mantequilla", "Dulce", "Cremoso"]
   }
-]
-
-const alco = [
-  {
-    "Name": "Eugenol",
-    "LitO": ["Pasta dental", "Mentolado"],
-    "FEMA": 2467,
-    "CAS" : "97-53-0",
-    "Syn" : ["2-Metoxi-4-(2-propenil)fenol", "4-Alil-2-metoxifenol", "4-Alilguayacol"]
-  },
-  {
-    "Name": "Hexenol cis-3",
-    "LitO": ["Pasto cortado", "Notas verdes"],
-    "Syn": ["Alcohol de hoja"],
-    "CAS": "928-96-1",
-    "FEMA": 2563
-  }
-]
-
-const Otros = [
-  {
-      "Name" : "Etil maltol",
-      "Syn" : ["2-Etil-3-hidroxi-4H-piran-4-ona","E-637"],
-      "CAS" : "4940-11-8",
-      "FEMA" : 3487,
-      "Type" : "Otros",
-      "LitO": ["uva"], 
-      "LitS": ["uva"],
-      "Lab":{
-        "Sar":  1, "Efr": 1, "Dam": 1, "Yaz": 1, "Pab":  1
-      }
-  },
-  {
-    "Name": "Beta Ionona",
-    "LitO": ["Mediciona","Jarabe","Notas rojas"]
-  },
-  {
-    "Name": "D-limoneno",
-    "LitO": ["Citrico","Cascara de limón"]
-  },
-  {
-    "Name": "Vainillina",
-    "LitS": ["Vainilla"],
-    "LitO": ["Vainilla","Pan"]
-  },
-  {
-    "Name": "6-metil cumarina",
-    "LitO": ["Frutos secos", "nueces"]
-  },
-  {
-    "Name": "Furaneol",
-    "LitO": ["Frutos rojos"]
-  },
-  {
-    "Name": "Etil maltol",
-    "LitS": ["Caramelo","Cajeta"],
-    "LitO": ["Caramelo"]
-  },
 ]
 
 const Ester =[
   {
     "Name": "Etil butirato",
     "Type": "Ester",
-    "FEMA": 2443,
+    "FEMA": 2427,
     "CAS": "105-54-4",
     "LitS": ["Uva", "Jugo de uva"],
     "LitO": ["Uva artficial"]
   },
  {
     "Name": "Metil cinamato",
-    "LitS": ["Cremoso", "Uva"],
-    "LitO": ["Plátano dulce"]   
+    "Syn": ["Ácido cinamato", "ácido trans-cinamico metil ester"],
+    "CAS": "1754-62-7​",
+    "FEMA": 2698,
+    "LitS": ["Cremoso", "Fresa"],
+    "LitO": ["Crema", "Frutal"]   
   },
   {
     "Name": "Isoamilbutirato",
-    "LitO": ["Plátano", "chicle"]    
+    "Syn": ["Butirato de isomailo","Butirato de isopentilo"],
+    "CAS":"106-27-4",
+    "FEMA": 2060,
+    "LitO": ["Plátano", "Chicle","Fruta"],
+    "LitS": ["Fruta","Plátano","Frutas verdes"]    
   },
   {
-    "Name": "Etil capronato",
-    "LitO": ["Dulce de anís"]
+    "Name": "Etil caproato",
+    "Syn": ["Capronato de etilo","Hexanoato de etilo"],
+    "CAS": "127-66-0",
+    "FEMA": 2439,
+    "LitO": ["Dulce de anís","Dulce de piña"],
+    "LitS": ["Fresa","Dulce"]
   },
   {
     "Name": "Etil 2-metilbutirato",
-    "LitO": ["Fresa artificial"]  
+    "Syn":["Ácido butanoico","Etil ester"],
+    "CAS":"7452-79-1",
+    "FEMA": 2443,
+    "LitO": ["Fresa artificial","Frutal"],
+    "LitS": ["Tutti frutti","Verde","Fruta"]  
   },
   {
     "Name": "Hexil acetato",
-    "LitO": ["Piña verde","Jugo de piña"]
+    "Syn":["Ácido hexil acético ester","n-Hexil acetato", "Hexil etanoato"],
+    "CAS":"142-92-7",
+    "FEMA": 2565,
+    "LitO": ["Piña verde","Jugo de piña"],
+    "LitS": ["Frutal etero","Platano a altas conc."]
   },
   {
-    "Name": "Benzil acetato",
+    "Name": "Bencil acetato",
+    "Syn": ["Ácido bencil acético ester", "Bencil etanoato"],
+    "CAS": "140-11-4",
+    "FEMA": 2135,
     "LitS": ["Floral","Perfume","Medicina"],
-    "LitO": ["Plástico"]
+    "LitO": ["Plástico", "Floral", "Verde-naturaleza"]
   },
   {
     "Name": "Alil ciclohexil propionato",
@@ -148,8 +139,6 @@ const Ester =[
   {
     "Name": "Alil heptilato",
     "LitO": ["Dulce de anís"]
-
-    
   },
   {
     "Name": "Hexil acetato cis"
@@ -171,6 +160,63 @@ const Ester =[
   }
 ]
 
+const Otros = [
+  {
+      "Name" : "Etil maltol",
+      "Syn" : ["2-Etil-3-hidroxi-4H-piran-4-ona","E-637"],
+      "CAS" : "4940-11-8",
+      "FEMA" : 3487,
+      "Type" : "Otros",
+      "LitO": ["Dulce","Caramelo"], 
+      "LitS": ["Dulce","Caramelo","Cajeta", "Dulce-frutal"]
+  },
+  {
+    "Name": "β-ionona",
+    "CAS": "14901-07-6",
+    "Type": "Otros",
+    "Syn":["β-Ciclocitrilideneacetona", "Beta Ionona"],
+    "FEMA": 2595,
+    "LitO": ["Mediciona","Jarabe","Notas rojas"],
+    "LitS": ["Medicina","Frutos rojos","Floral"]
+  },
+  {
+    "Name": "D-limoneno",
+    "CAS":"5989-27-5",
+    "Type": "Otros",
+    "FEMA":2633,
+    "Syn":["(+)-Carvene", "(R)-(+)-Limnoneno"],
+    "LitO": ["Cítrico","Cascara de limón"],
+    "LitS": ["Cítrico","Limón", "Zumo de limón en altas conc."]
+  },
+  {
+    "Name": "Vanilina",
+    "Syn": ["Aldehido vanilico","p-Vanilina"],
+    "Type": "Otros",
+    "CAS": "121-33-5​",
+    "FEMA": 3107,
+    "LitS": ["Vainilla"],
+    "LitO": ["Vainilla"]
+  },
+  {
+    "Name": "6-metil cumarina",
+    "Syn":["Cocodescol","Pralina","Toncarine"],
+    "CAS":"202-158-8",
+    "FEMA": 2699,
+    "Type": "Otros",
+    "LitS": ["XXXXXXXXXX","Amargo a concentraciones muy altas"],
+    "LitO": ["Frutos secos", "Rojo canela"]
+  },
+  {
+    "Name": "Furaneol",
+    "Syn":["Furanona de fresa", "2,5-dimetil-4-hidroxi-3(2h)-furanona"],
+    "CAS" : "3658-77-3",
+    "FEMA": 3174,
+    "Type": "Otros",
+    "LitO": ["Frutos rojos","Caramelo"],
+    "LitS": ["Fresa","Caramelo"]
+
+  }
+]
 
 
 
@@ -181,24 +227,25 @@ function Template(Sabor){
     <img class="sab-img" src="img/${Sabor.FEMA}.jpg">
     <h3>${Sabor.Name}</h3>
 
-    <p style="text-align:right;"><b>Tipo:</b> ${Sabor.Type}
-    ${Sabor.CAS ? `<b>CAS: </b> ${Sabor.CAS}`: ""}
+    <p style="text-align:right;">
+    ${Sabor.Type ? `<b>Tipo:</b> ${Sabor.Type}  `: "" }
+    ${Sabor.CAS ? `<b>CAS: </b> ${Sabor.CAS}  `: ""}
     ${Sabor.FEMA ? `<b>FEMA: </b> ${Sabor.FEMA}`: ""}</p>
     
     <p> ${Sabor.Syn ? `<b>Sinónimos: </b> ${Sabor.Syn.join(", ")} `: ""} </p>
 
-  <div style="overflow-x:auto;">
-    <table>
-    <tr class="Tabheader">
-      <th style="width:50%;">Olor</th>
-      <th style="width:50%;">Sabor</th>
-    </tr>
-    <tr>
-      <td> ${Sabor.LitO ? `${Sabor.LitO.join("<br>")}`: ""} </td>
-      <td> ${Sabor.LitS ? `${Sabor.LitS.join("<br>")}`: ""} </td>
-    </tr>
-    </table>
-  </div>
+    <div style="overflow-x:auto;">
+      <table>
+      <tr class="Tabheader">
+        <th style="width:50%;">Olor</th>
+        <th style="width:50%;">Sabor</th>
+      </tr>
+      <tr>
+        <td> ${Sabor.LitO ? `${Sabor.LitO.join("<br>")}`: ""} </td>
+        <td> ${Sabor.LitS ? `${Sabor.LitS.join("<br>")}`: ""} </td>
+      </tr>
+      </table>
+    </div>
 
   </div>
 
@@ -243,12 +290,15 @@ document.body.innerHTML = `
     ${Ester.map(Template).join()} 
   </div>
 
-<button class="collapsible" style="background-color:"#eee"> 
+<button class="collapsible" style="background-color:#eee"> 
   <h2> Otros </h2> 
 </button> 
 <div class="content">
   ${Otros.map(Template).join()} 
 </div>
+
+
+
 `
 
 

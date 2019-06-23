@@ -66,6 +66,8 @@ table {
   background-color: #141d29;
   text-align: center;
   color: white;
-  padding: .1rem;
+  padding-top: .1rem;
+  padding-bottom: 0px;
+  margin-top: 4rem;
   margin-bottom: 0px;
 }
