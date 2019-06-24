@@ -134,29 +134,67 @@ const Ester =[
   },
   {
     "Name": "Alil ciclohexil propionato",
-    "LitO": ["Moras"]
+    "Syn": ["Alil ciclohexenpropionato"],
+    "CAS":"2705-292-5",
+    "FEMA": 2026,
+    "LitO": ["Moras","Fruta tropical verde"],
+    "LitS": ["Fruta tropical", "Piña"]
   },
   {
     "Name": "Alil heptilato",
-    "LitO": ["Dulce de anís"]
+    "Syn":["Alil heptanoato", "2-propenil ester"],
+    "CAS":"142-19-8",
+    "FEMA": 2031,
+    "LitO": ["Dulce de anís","Plátano dulce", "Fruta ligeramente fermentada"],
+    "LitS": ["Plátano","Piñas","Frutal"]
   },
   {
-    "Name": "Hexil acetato cis"
+    "Name": "Hexil acetato cis",
+    "Syn":["[(Z)-hex-3-enil] acetato"],
+    "CAS": "3681-71-8",
+    "FEMA": 3171,
+    "LitO":["Verde manzana","Verde","Plátano ligero"],
+    "LitS":["Manzana verde"]
   },
   {
-    "Name": "Isoamil acetato"
+    "Name": "Isoamil acetato",
+    "Syn": ["3-metilbutil acetato"],
+    "CAS": "123-92-2",
+    "FEMA": 2055,
+    "LitO": ["Plátano en chicle"],
+    "LitS": ["Plátano","Plátano plástico a altas conc."]
   },
   {
-    "Name": "Alil capronato"
+    "Name": "Alil capronato",
+    "Syn":["Alil hexanoato","Ácido alil hexanoico ester","2-propenil hexanoato"],
+    "FEMA": 2032,
+    "CAS": "123-68-2",
+    "LitS": ["Piña", "Tang de piña"],
+    "LitO": ["Piña", "Piña falsa a altas conc."]
   },
   {
-    "Name": "Decalactona gamma"
+    "Name": "γ-Decalactona",
+    "Syn":["Decalactona gamma"],
+    "FEMA": 2360,
+    "CAS":"706-14-9",
+    "LitO":["Crema","Galleta"],
+    "LitS":["Dulce","Cremoso"]
   },
   {
-    "Name": "Octalactona gamma"
+    "Name": "γ-Octalactona",
+    "Syn":["Octano-1,4-lactona", "Octalactona gamma", "Ácido 4-Hidroxioctanoico"],
+    "CAS": "104-50-7",
+    "FEMA": 2796,
+    "LitO": ["Cremoso","Dulce"],
+    "LitS": ["Coco","Fruta"]
   },
   {
-    "Name": "Hexalactona gamma"
+    "Name": "γ-Hexalactona",
+    "Syn":["Caprolactona-gamma","Hexalactona gamma"],
+    "FEMA": 2556,
+    "CAS": "695-06-7",
+    "LitS":["Flores marchitas"],
+    "LitO":["Cebolla"]
   }
 ]
 
@@ -217,7 +255,6 @@ const Otros = [
 
   }
 ]
-
 
 
 
