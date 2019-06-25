@@ -30,6 +30,27 @@ const alco = [
 
 const Alde = [
   {
+    "Name": "Acetaldehido",
+    "LitO": ["Quita esmalte de uña"]
+  },
+  
+  {
+    "Name": "Aldehído C-6",
+    "LitO": ["Insecto aplastado"]
+  },
+
+  {
+    "Name": "Aldehído C-14",
+    "LitO": ["Moras","Floral","Perfume"]
+  },
+
+  {
+    "Name": "Aldehído C-16",
+    "LitS": ["Coco cremoso"],
+    "LitO": ["Coco cremoso"]
+  },
+
+  {
     "Name" : "Aldehido-C18",
     "Syn" : ["γ-nonalactona", "Aldehido de coco", "Ácido 4-Hidroxinonanoico"],
     "CAS" : "104-61-0",
@@ -42,6 +63,12 @@ const Alde = [
     }
 
   },
+
+  {
+    "Name": "Anisaldehído",
+    "LitO": ["Cereza tenue"]
+  },
+  
   {
     "Name": "Benzaldehido",
     "Type": "Aldehido",
@@ -50,20 +77,14 @@ const Alde = [
     "LitO":["Almendra"],
     "LitS":["Almendra","Cereza","Nueces","Aceitoso"]
   },
-
- 
+  
+  {
+    "Name": "Hexenal trans-2",
+    "LitO": ["Plantas","Notas verdes"]
+  }
 ]
 
 const Keto = [
-  {
-    "Name": "Raspberry Ketone",
-    "Syn":["4-(4Hidroxifenil)-2-butanona","Rheosmin","p-Hidroxibencil acetona","Frambinone"],
-    "Type": "Cetona",
-    "CAS":"5471-51-2",
-    "FEMA": 2588,
-    "LitS": ["Frambuesa","Frutos rojos", "Algodón de azucar"],
-    "LitO": ["Moras", "Cremoso"]
-  },
   {
     "Name": "Diacetilo",
     "Type": "Cetona",
@@ -72,6 +93,16 @@ const Keto = [
     "FEMA": 2370,
     "LitO": ["Mantequilla quemada"],
     "LitS":["Mantequilla", "Dulce", "Cremoso"]
+  },
+
+  {
+    "Name": "Raspberry Ketone",
+    "Syn":["4-(4Hidroxifenil)-2-butanona","Rheosmin","p-Hidroxibencil acetona","Frambinone"],
+    "Type": "Cetona",
+    "CAS":"5471-51-2",
+    "FEMA": 2588,
+    "LitS": ["Frambuesa","Frutos rojos", "Algodón de azucar"],
+    "LitO": ["Moras", "Cremoso"]
   }
 ]
 
@@ -333,9 +364,6 @@ document.body.innerHTML = `
 <div class="content">
   ${Otros.map(Template).join()} 
 </div>
-
-
-
 `
 
 
