@@ -25,6 +25,12 @@ const alco = [
     "CAS": "928-96-1",
     "FEMA": 2563,
     "LitS":["Pasto","Verde","Hierbas"]
+  },
+  {
+    "Name":"Hexanol",
+    "FEMA":3351,
+    "CAS":"623-37-0",
+    "Syn":["3-Hexanol",	"Hexan-3-ol"]
   }
 ]
 
@@ -47,7 +53,8 @@ const Alde = [
   {
     "Name": "Aldehído C-16",
     "LitS": ["Coco cremoso"],
-    "LitO": ["Coco cremoso"]
+    "LitO": ["Coco cremoso"],
+    "Sar":  1, "Efr": 1, "Dam": 3
   },
 
   {
@@ -58,29 +65,44 @@ const Alde = [
     "Type" : "Aldehido",
     "LitO": ["Caramelo", "Frutral"],
     "LitS": ["Coco","Cremoso"],
-    "Lab":{
-        "Sar":  1, "Efr": 1, "Dam": 1, "Yaz": 1, "Pab":  1
-    }
-
+    "Stor":"Mantener en recipientes cerrados en lugares secos y proteger de la luz solar",
+    "Usos":"Saborizante con sensación a coco y/o cremoso, igual se emplea en perfumes",
+    "pe": 243,
+    "Carc":"Incoloro a amarillo pálido, aceitoso.",
+    "Sar":  5, "Efr": 10, "Dam": 1, "Yaz": 0, "Pab":  3
   },
 
   {
     "Name": "Anisaldehído",
-    "LitO": ["Cereza tenue"]
+    "FEMA": 2670,
+    "CAS": "0135-02-04",
+    "Syn":["Aldehido anísico natural","4-metoxibenzaldehido"],
+    "LitO": ["Cereza tenue"],
+    "LitS":["Frutos rojos","Floral"],
+    "Stor":"Guardar en recipientes bien llenos y cerrados en lugares frescos y secos alejados de la luz",
+    "Usos":"Saborizante que da sensación a frutos rojos a floral",
+    "pe": 118,
+    "Carac":"Líquido fluido transparente e insoluble en agua"
   },
   
   {
     "Name": "Benzaldehido",
     "Type": "Aldehido",
+    "Syn":["Aldehido benzoico",	"Fenilmetanal"],
     "FEMA": 2127,
     "CAS": "100-52-7",
     "LitO":["Almendra"],
-    "LitS":["Almendra","Cereza","Nueces","Aceitoso"]
+    "LitS":["Almendra","Cereza","Nueces","Sensación aceitosa"],
+    "Stor":"Guardar en recipientes bien llenos y cerrados en lugares frescos y secos alejados de la luz",
+    "Usos":"Saborizante a almedras, disolvente industrial y para la síntesis de compuestos orgánicos",	
+    "pe": 178,	
+    "Carac":"Disperso en partículas finas puede inflamarse de forma espontánea. Puede formar peróxidos en contacto con el aire."
   },
   
   {
     "Name": "Hexenal trans-2",
-    "LitO": ["Plantas","Notas verdes"]
+    "LitO": ["Plantas","Notas verdes"],
+    
   }
 ]
 
@@ -272,7 +294,7 @@ const Otros = [
     "CAS":"202-158-8",
     "FEMA": 2699,
     "Type": "Otros",
-    "LitS": ["XXXXXXXXXX","Amargo a concentraciones muy altas"],
+    "LitS": ["Amargo a concentraciones muy altas"],
     "LitO": ["Frutos secos", "Rojo canela"]
   },
   {
@@ -296,9 +318,11 @@ function Template(Sabor){
     <h3>${Sabor.Name}</h3>
 
     <p style="text-align:right;">
-    ${Sabor.Type ? `<b>Tipo:</b> ${Sabor.Type}  `: "" }
-    ${Sabor.CAS ? `<b>CAS: </b> ${Sabor.CAS}  `: ""}
-    ${Sabor.FEMA ? `<b>FEMA: </b> ${Sabor.FEMA}`: ""}</p>
+    ${Sabor.Type ? `<b>Tipo: </b> ${Sabor.Type} `: "" }
+    ${Sabor.CAS ? `<b>CAS: </b> ${Sabor.CAS} `: ""}
+    ${Sabor.FEMA ? `<b>FEMA: </b> ${Sabor.FEMA} `: ""}
+    ${Sabor.pe ? `<b>Punto de ebullición: </b> ${Sabor.pe} °C` :""}
+    </p>
     
     <p> ${Sabor.Syn ? `<b>Sinónimos: </b> ${Sabor.Syn.join(", ")} `: ""} </p>
 
@@ -314,7 +338,36 @@ function Template(Sabor){
       </tr>
       </table>
     </div>
-
+  <b>Usos: </b> ${Sabor.Usos}
+  <br><br>
+ 
+  <strong>Concentración ideal reportada por los integrantes del equipo:</strong><br>
+  <div>
+    <table style="text-align:center;">
+      <tr>
+        <th>Saborista</th>
+        <th>Efrén</th>
+        <th>Damian</th>
+        <th>Sarah</th>
+        ${Sabor.Pab ? `<th>Pablo</th>`:""}
+        ${Sabor.Yaz ? `<th>Yazmany</th>`:""}
+        <th>Promedio</th>
+      </tr>
+      <tr>
+        <td><strong>ppm</strong></td>
+        <td>${Sabor.Efr}</td>
+        <td>${Sabor.Dam}</td>
+        <td>${Sabor.Sar}</td>
+        ${Sabor.Pab ? `<td>${Sabor.Pab}</td>`:""}
+        ${Sabor.Yaz ? `<td>${Sabor.Yaz}</td>`:""}
+        <td>${Sabor.Pab ? parseFloat((Sabor.Efr + Sabor.Dam + Sabor.Sar + Sabor.Pab + Sabor.Yaz)/ 5).toFixed(1): parseFloat(((Sabor.Efr + Sabor.Dam + Sabor.Sar)/ 3)).toFixed(1)}</td>
+      </tr>
+    </table>  
+  </div>
+  
+  
+  ${Sabor.Stor ? `<br> <b>Notas de almacenamiento: </b> ${Sabor.Stor}`:""}
+  ${Sabor.Carac ? `<br> <b>Notas de generales: </b> ${Sabor.Carac}`:""}
   </div>
 
   `}
