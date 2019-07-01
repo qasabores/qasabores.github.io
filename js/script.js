@@ -70,7 +70,7 @@ const Alde = [
     "pe": 243,
     "Carc":"Incoloro a amarillo pálido, aceitoso.",
     "Sar":  5, "Efr": 10, "Dam": 1, "Yaz": 0, "Pab":  3
-  },
+  }, 
 
   {
     "Name": "Anisaldehído",
@@ -102,7 +102,7 @@ const Alde = [
   {
     "Name": "Hexenal trans-2",
     "LitO": ["Plantas","Notas verdes"],
-    
+
   }
 ]
 
