@@ -76,13 +76,14 @@ const Alde = [
     "Name": "Anisaldehído",
     "FEMA": 2670,
     "CAS": "0135-02-04",
-    "Syn":["Aldehido anísico natural","4-metoxibenzaldehido"],
+    "Syn":["Aldehido anísico natural","4-metoxibenzaldehido", "p-anisaldehído","Aubépine"],
     "LitO": ["Cereza tenue"],
     "LitS":["Frutos rojos","Floral"],
     "Stor":"Guardar en recipientes bien llenos y cerrados en lugares frescos y secos alejados de la luz",
     "Usos":"Saborizante que da sensación a frutos rojos a floral",
     "pe": 118,
-    "Carac":"Líquido fluido transparente e insoluble en agua"
+    "Carac":"Líquido fluido transparente e insoluble en agua",
+    "Sar": 3, "Efr":	1, "Dam": 5
   },
   
   {
@@ -94,14 +95,24 @@ const Alde = [
     "LitO":["Almendra"],
     "LitS":["Almendra","Cereza","Nueces","Sensación aceitosa"],
     "Stor":"Guardar en recipientes bien llenos y cerrados en lugares frescos y secos alejados de la luz",
-    "Usos":"Saborizante a almedras, disolvente industrial y para la síntesis de compuestos orgánicos",	
+    "Usos":"Saborizante a almedras, disolvenste industrial y para la síntesis de compuestos orgánicos",	
     "pe": 178,	
-    "Carac":"Disperso en partículas finas puede inflamarse de forma espontánea. Puede formar peróxidos en contacto con el aire."
+    "Carac":"Disperso en partículas finas puede inflamarse de forma espontánea. Puede formar peróxidos en contacto con el aire.",
+    "Sar":7, "Efr":	10,"Dam":	5, "Pab":	5
   },
   
   {
     "Name": "Hexenal trans-2",
+    "FEMA": 2560,
+    "CAS":"6728-26-8",
     "LitO": ["Plantas","Notas verdes"],
+    "LitS":["Banana","Frutos verdes","Cítrico","Manzana"],
+    "Syn":["2-hexenal","(E)-Hex-2-enal"],
+    "Stor":"Guardar en recipientes bien llenos y cerrados en lugares frescos y secos alejados de la luz",
+    "Usos":"Saborizante a verde, cítrico y manzana",
+    "pe" : 146,
+    "Carac":"Inflamable, ligeramente soluble en agua, se oxida facilmente",
+    "Sar":1,"Efr":7, "Dam":1, "Pab":1
 
   }
 ]
@@ -114,7 +125,12 @@ const Keto = [
     "CAS":"431-03-8",
     "FEMA": 2370,
     "LitO": ["Mantequilla quemada"],
-    "LitS":["Mantequilla", "Dulce", "Cremoso"]
+    "LitS":["Mantequilla", "Dulce", "Cremoso"],
+    "Stor":"Mantener en recipientes cerrados en lugares secos, libres de ignición y proteger de la luz solar",
+    "Usos":"Saborizante químico presente en productos artificales de mantequilla y también en cigarros electrónicos", 
+    "pe": 81,
+    "Carac":"Liquido color amarillo  a verde inflamable relativamente soluble en agua, en ciertas concentraciones es irritante para la piel",
+    "Sar":1,"Efr":10,"Dam":	1
   },
 
   {
@@ -124,7 +140,12 @@ const Keto = [
     "CAS":"5471-51-2",
     "FEMA": 2588,
     "LitS": ["Frambuesa","Frutos rojos", "Algodón de azucar"],
-    "LitO": ["Moras", "Cremoso"]
+    "LitO": ["Moras", "Cremoso"],
+    "Stor":"Mantener en recipientes cerrados en lugares secos, libres de ignición y proteger de la luz solar",
+    "Usos":"Se emplea en saborizantes y como suplemento alimenticio",
+    "pe":200,
+    "Carac":"Insoluble en agua y aceite. Soluble en alcohol y éter. Consistencia blancuzca",
+    "Sar":10, "Efr":	10,	"Dam":10, "Pab":	5
   }
 ]
 
@@ -133,17 +154,27 @@ const Ester =[
     "Name": "Etil butirato",
     "Type": "Ester",
     "FEMA": 2427,
+    "Syn": ["Butanoato de etilo",	"Éter butírico"],
     "CAS": "105-54-4",
-    "LitS": ["Uva", "Jugo de uva"],
-    "LitO": ["Uva artficial"]
+    "LitS": ["Piña",	"Cítrico"],
+    "LitO": ["Piña",	"Fruta"],
+    "Sar":7,"Efr":	7, "Dam":	7, "Pab":	7,
+    "Stor":"Guardar en recipientes bien llenos y cerrados en lugares frescos y secos alejados de la luz",	
+    "Usos":"Se utiliza como aromatizante artificial parecido al zumo de naranja o de piña,  como un disolvente en productos de perfumería, y como un plastificante para la celulosa",
+    "pe": 121,
+    "Carac":"Líquido incoloro soluble en propilenglicol, aceite de parafina y queroseno."
   },
  {
     "Name": "Metil cinamato",
     "Syn": ["Ácido cinamato", "ácido trans-cinamico metil ester"],
     "CAS": "1754-62-7​",
     "FEMA": 2698,
-    "LitS": ["Cremoso", "Fresa"],
-    "LitO": ["Crema", "Frutal"]   
+    "LitS": ["Cremoso", "Fresa", "Dulce"],
+    "LitO": ["Crema", "Frutal","Balsámico", "Dulce"],
+    "Stor":"Mantener en frasco bien cerrado en lugar fresco y seco, proteger de la luz y calor.",
+    "Usos": "Sabores frutales y perfumes",
+    "pe":260,
+    "Carac":"Líquido incoloro, soluble en alcoholes y aceites."   
   },
   {
     "Name": "Isoamilbutirato",
@@ -151,7 +182,12 @@ const Ester =[
     "CAS":"106-27-4",
     "FEMA": 2060,
     "LitO": ["Plátano", "Chicle","Fruta"],
-    "LitS": ["Fruta","Plátano","Frutas verdes"]    
+    "LitS": ["Fruta","Plátano","Frutas verdes"],
+    "Sar": 5, "Efr":	10, "Dam":	5,
+    "Stor":"Guardar en recipientes cerrados en lugares frescos y secos protegidos de la luz. Superados los 24 meses de almacenaje, se deberá controlar la calidad antes de usar",
+    "Usos":	"Pera, melocotón, plátano y frutas",
+    "pe":	186,
+    "Carac": "Es un éster del alcohol isoamílico y el ácido acético. Es un líquido inflamable."
   },
   {
     "Name": "Etil caproato",
@@ -159,7 +195,12 @@ const Ester =[
     "CAS": "127-66-0",
     "FEMA": 2439,
     "LitO": ["Dulce de anís","Dulce de piña"],
-    "LitS": ["Fresa","Dulce"]
+    "LitS": ["Fresa","Dulce"],
+    "Stor": "Guardar en recipientes cerrados en lugares frescos y secos protegidos de la luz. Superados los 24 meses de almacenaje, se deberá controlar la calidad antes de usar",
+    "Usos": "Piña, fresa y frutos",
+    "pe":168,
+    "Carac":"Insoluble en agua, miscible en alcohol y éter",
+    "Sar": 5,"Efr":	7,"Dam":	5, "Pab":	5
   },
   {
     "Name": "Etil 2-metilbutirato",
@@ -167,7 +208,12 @@ const Ester =[
     "CAS":"7452-79-1",
     "FEMA": 2443,
     "LitO": ["Fresa artificial","Frutal"],
-    "LitS": ["Tutti frutti","Verde","Fruta"]  
+    "LitS": ["Tutti frutti","Verde","Fruta"],
+    "Stor":"Mantener alejado de fuentes de ignición. Guardar en recipientes cerrados en lugares frescos y secos protegidos de la luz. Superados los 24 meses de almacenaje, se deberá controlar la calidad antes de usar",
+    "Usos":"Frutas, fresa, menta y verde",
+    "pe":65,
+    "Carac":"Líquido incoloro con olor a piña. Se utiliza en la elaboración del ron. Es altamente inflamable",
+    "Sar":3,	"Efr":5,	"Dam":1,"Pab": 5
   },
   {
     "Name": "Hexil acetato",
@@ -175,7 +221,12 @@ const Ester =[
     "CAS":"142-92-7",
     "FEMA": 2565,
     "LitO": ["Piña verde","Jugo de piña"],
-    "LitS": ["Frutal etero","Platano a altas conc."]
+    "LitS": ["Frutal etero","Platano a altas concentraciones"],
+    "Stor":"Mantener alejado de fuentes de ignición. Guardar en recipientes cerrados en lugares frescos y secos protegidos de la luz. Superados los 24 meses de almacenaje, se deberá controlar la calidad antes de usar",
+    "Usos":"Frutas, fresa, menta y verde",
+    "pe": 65,
+    "Carac":"Líquido incoloro con olor a piña. Se utiliza en la elaboración del ron. Es altamente inflamable",
+    "Sar":5,	"Efr":10,	"Dam":3,"Pab": 5
   },
   {
     "Name": "Bencil acetato",
@@ -183,7 +234,12 @@ const Ester =[
     "CAS": "140-11-4",
     "FEMA": 2135,
     "LitS": ["Floral","Perfume","Medicina"],
-    "LitO": ["Plástico", "Floral", "Verde-naturaleza"]
+    "LitO": ["Plástico", "Floral", "Verde-naturaleza"],
+    "Sar":5,"Efr":5, "Dam":	3, "Pab":5,
+    "Stor":"Guardar en recipientes cerrados en lugares frescos y secos protegidos de la luz. Superados los 24 meses de almacenaje, se deberá controlar la calidad antes de usar.",
+    "Usos":	"Frutal y floral",
+    "pe": 212,
+    "Carac":"Es combustible e insoluble en agua, miscible en alcohol y éter"
   },
   {
     "Name": "Alil ciclohexil propionato",
@@ -191,7 +247,13 @@ const Ester =[
     "CAS":"2705-292-5",
     "FEMA": 2026,
     "LitO": ["Moras","Fruta tropical verde"],
-    "LitS": ["Fruta tropical", "Piña"]
+    "LitS": ["Fruta tropical", "Piña"],
+    "Sar": 7, "Efr":3, "Dam":3, "Pab":5,
+    "pe":91,
+    "Stor":"Mantener bien cerrado, en un lugar ventilado y seco, alejado de fuentes de ignición y protegido de la luz.",
+    "Usos":"Piña, sandía, moras y frutas",
+    "Carac":"Líquido incoloro con olor a piña. Emite un humo acre e irritante cuando se calienta a la descomposición."
+
   },
   {
     "Name": "Alil heptilato",
@@ -199,7 +261,12 @@ const Ester =[
     "CAS":"142-19-8",
     "FEMA": 2031,
     "LitO": ["Dulce de anís","Plátano dulce", "Fruta ligeramente fermentada"],
-    "LitS": ["Plátano","Piñas","Frutal"]
+    "LitS": ["Plátano","Piñas","Frutal"],
+    "Stor":"Mantener en frasco bien cerrado en lugar fresco y seco, proteger de la luz y calor.",
+    "Usos":	"Sabores frutales",
+    "pe":210,
+    "Carac":"Líquido de incoloro a amarillo pálido, insoluble en agua, soluble en alcohol.",
+    "Sar":5, "Efr":	10, "Dam":	7, "Pab":	5
   },
   {
     "Name": "Hexil acetato cis",
@@ -207,7 +274,13 @@ const Ester =[
     "CAS": "3681-71-8",
     "FEMA": 3171,
     "LitO":["Verde manzana","Verde","Plátano ligero"],
-    "LitS":["Manzana verde"]
+    "LitS":["Manzana verde"],
+    "Stor":"Mantener en frasco bien cerrado en lugar fresco y seco, proteger de la luz y calor.",
+    "Usos":"Sabores frutales y florales.",
+    "Carac":"Líquido incoloro, gran cantidad de isómeros.",
+    "pe":165,
+    "Sar":1,"Efr":3, "Dam":3, "Pab":	3
+
   },
   {
     "Name": "Isoamil acetato",
@@ -215,7 +288,12 @@ const Ester =[
     "CAS": "123-92-2",
     "FEMA": 2055,
     "LitO": ["Plátano en chicle"],
-    "LitS": ["Plátano","Plátano plástico a altas conc."]
+    "LitS": ["Plátano","Plátano plástico a altas conc."],
+    "Sar":5, "Efr":7, "Dam":3, "Pab":	3,
+    "Stor":"Mantener en frasco bien cerrado en lugar fresco y seco, proteger de la luz y calor.",
+    "Usos":"Sabor plátano",
+    "pe":142,
+    "Carac":"Líquido incoloro, soluble en solventes orgánicos."
   },
   {
     "Name": "Alil capronato",
@@ -223,7 +301,12 @@ const Ester =[
     "FEMA": 2032,
     "CAS": "123-68-2",
     "LitS": ["Piña", "Tang de piña"],
-    "LitO": ["Piña", "Piña falsa a altas conc."]
+    "LitO": ["Piña", "Piña falsa a altas conc."],
+    "Stor":"Mantener en frasco bien cerrado en lugar fresco y seco, proteger de la luz y calor.",
+    "Usos":"Sabores frutales y perfumería",
+    "pe":185,
+    "Carac":"Líquido incoloro, soluble en alcoholes y aceites.",
+    "Sar":5, "Efr":10, "Dam":	1
   },
   {
     "Name": "γ-Decalactona",
@@ -231,7 +314,12 @@ const Ester =[
     "FEMA": 2360,
     "CAS":"706-14-9",
     "LitO":["Crema","Galleta"],
-    "LitS":["Dulce","Cremoso"]
+    "LitS":["Dulce","Cremoso"],
+    "Stor":"Mantener en frasco bien cerrado en lugar fresco y seco, proteger de la luz y calor.",
+    "Usos":"Saborizante para lácteos",
+    "pe":266,
+    "Carac":"Líquido incoloro a amarillo pálido, soluble en alcohol.",
+    "Sar": 5, "Efr": 10, "Dam":	5, "Pab":	10
   },
   {
     "Name": "γ-Octalactona",
@@ -239,15 +327,25 @@ const Ester =[
     "CAS": "104-50-7",
     "FEMA": 2796,
     "LitO": ["Cremoso","Dulce"],
-    "LitS": ["Coco","Fruta"]
+    "LitS": ["Coco","Fruta"],
+    "pe":234,
+    "Stor":"Mantener en frasco bien cerrado en lugar fresco y seco, proteger de la luz y calor.",
+    "Usos":	"Sabores cremosos",
+    "Carac":"Líquido incoloro, soluble en alcoholes.",
+    "Sar": 7, "Efr":	10, "Dam":	10
   },
   {
     "Name": "γ-Hexalactona",
     "Syn":["Caprolactona-gamma","Hexalactona gamma"],
     "FEMA": 2556,
     "CAS": "695-06-7",
-    "LitS":["Flores marchitas"],
-    "LitO":["Cebolla"]
+    "LitS":["Flores marchitas","Coco","Cremoso"],
+    "LitO":["Cebolla","Cremoso"],
+    "Stor":"Mantener en frasco bien cerrado en lugar fresco y seco, proteger de la luz y calor.",
+    "Usos":"Sabores cremosos y perfumería",
+    "pe":215,
+    "Carac":"Líquido incoloro, soluble en alcoholes.",
+    "Sar":7, "Efr":	10,"Dam":	7
   }
 ]
 
@@ -259,7 +357,13 @@ const Otros = [
       "FEMA" : 3487,
       "Type" : "Otros",
       "LitO": ["Dulce","Caramelo"], 
-      "LitS": ["Dulce","Caramelo","Cajeta", "Dulce-frutal"]
+      "LitS": ["Dulce","Caramelo","Cajeta", "Dulce-frutal"],
+      "Stor":"Refrigeración",
+      "Usos": "Diversas frutas",
+      "pe":197,
+      "Carc":"De 4 a 6 veces más potente que el matol, soluble en agua, propilen glicol y etanol",
+      "Sar":7,"Efr":7, "Dam":5, "Pab":5
+
   },
   {
     "Name": "β-ionona",
@@ -268,7 +372,13 @@ const Otros = [
     "Syn":["β-Ciclocitrilideneacetona", "Beta Ionona"],
     "FEMA": 2595,
     "LitO": ["Mediciona","Jarabe","Notas rojas"],
-    "LitS": ["Medicina","Frutos rojos","Floral"]
+    "LitS": ["Medicina","Frutos rojos","Floral"],
+    "Sar": 0.7, "Efr":	5, "Dam":	1, "Pab":	3,
+    "pe":239,
+    "Stor":"Mantener en temperaturas bajas",
+    "Usos":"Frutos rojos, cognac, vino, papaya, cerveza, etc.",
+    "Carac": "Se puede sintetizar de citral y acetona para luego usar algun ácido."
+
   },
   {
     "Name": "D-limoneno",
@@ -277,7 +387,11 @@ const Otros = [
     "FEMA":2633,
     "Syn":["(+)-Carvene", "(R)-(+)-Limnoneno"],
     "LitO": ["Cítrico","Cascara de limón"],
-    "LitS": ["Cítrico","Limón", "Zumo de limón en altas conc."]
+    "LitS": ["Cítrico","Limón", "Zumo de limón en altas conc."],
+    "Stor":"Mantener a temperaturas bajas y tener cuidado con la flamabilidad.",
+    "Usos":"Cítricos",
+    "pe":177,
+    "Carac":"Soluble en agua y solventes, se obtiene por arrastre de vapor de cascara y pulpa de cítrico"
   },
   {
     "Name": "Vanilina",
@@ -286,7 +400,12 @@ const Otros = [
     "CAS": "121-33-5​",
     "FEMA": 3107,
     "LitS": ["Vainilla"],
-    "LitO": ["Vainilla"]
+    "LitO": ["Vainilla"],
+    "Stor":"Refrigeración",
+    "Usos":"Sabores dulces, caramelo",
+    "pe":170,
+    "Carac":"Se descolora al estar expuesta al sol, incompatible con agentes oxidantes.",
+    "Sar": 3, "Efr":	10, "Dam":	1, "Pab":	1
   },
   {
     "Name": "6-metil cumarina",
@@ -294,8 +413,13 @@ const Otros = [
     "CAS":"202-158-8",
     "FEMA": 2699,
     "Type": "Otros",
-    "LitS": ["Amargo a concentraciones muy altas"],
-    "LitO": ["Frutos secos", "Rojo canela"]
+    "LitS": ["Amargo a concentraciones muy altas","Cremoso", "Cumarina", "Coco", "Vainilla", "Dulce"],
+    "LitO": ["Frutos secos", "Rojo canela"],
+    "Stor":"Refrigeración",
+    "Usos":"Dulces, coco, anis",
+    "pe":303,
+    "Carac":"Insoluble en agua. Artificial",
+    "Sar":3, "Efr":10, "Dam":10
   },
   {
     "Name": "Furaneol",
@@ -304,8 +428,12 @@ const Otros = [
     "FEMA": 3174,
     "Type": "Otros",
     "LitO": ["Frutos rojos","Caramelo"],
-    "LitS": ["Fresa","Caramelo"]
-
+    "LitS": ["Fresa","Caramelo"],
+    "pe":188,
+    "Carac": "Se ha usado como saborisante para carne",
+    "Stor":"Refrigeración",
+    "Usos":"Dulce, fresa, piña",
+    "Sar": 0.5, "Efr":	0.5, "Dam":	0.1, "Pab": 0.7
   }
 ]
 
@@ -360,21 +488,20 @@ function Template(Sabor){
         <td>${Sabor.Sar}</td>
         ${Sabor.Pab ? `<td>${Sabor.Pab}</td>`:""}
         ${Sabor.Yaz ? `<td>${Sabor.Yaz}</td>`:""}
-        <td>${Sabor.Pab ? parseFloat((Sabor.Efr + Sabor.Dam + Sabor.Sar + Sabor.Pab + Sabor.Yaz)/ 5).toFixed(1): parseFloat(((Sabor.Efr + Sabor.Dam + Sabor.Sar)/ 3)).toFixed(1)}</td>
+        <td>${Sabor.Yaz ? parseFloat((Sabor.Efr + Sabor.Dam + Sabor.Sar + Sabor.Pab + Sabor.Yaz)/ 5).toFixed(1): parseFloat(((Sabor.Efr + Sabor.Dam + Sabor.Sar)/ 3)).toFixed(1)}</td>
       </tr>
     </table>  
   </div>
   
   
   ${Sabor.Stor ? `<br> <b>Notas de almacenamiento: </b> ${Sabor.Stor}`:""}
-  ${Sabor.Carac ? `<br> <b>Notas de generales: </b> ${Sabor.Carac}`:""}
+  ${Sabor.Carac ? `<br> <b>Notas generales: </b> ${Sabor.Carac}`:""}
   </div>
 
   `}
 
 document.body.innerHTML = `
-<h1>Hola, soy un compendio (${acid.length + Alde.length + Keto.length + Ester.length + alco.length + Otros.length} compuestos)</h1>
-
+<h1>Catálogo de saborizantes (${acid.length + Alde.length + Keto.length + Ester.length + alco.length + Otros.length} compuestos)</h1>
 
 <button class="collapsible" style="background-color:#f4cc9a"> 
   <h2> Ácido carboxílico </h2>
